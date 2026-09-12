@@ -1,0 +1,18 @@
+description
+    ↓
+get_params()                ← reads Parameters (variables, data)
+    ↓
+get_objective()             ← chooses or builds Objective
+    ↓
+get_constraints()           ← gathers Constraint objects
+    ↓
+get_constraint_formulations()← expands parameterised equations into concrete Gurobi syntax
+    ↓
+get_objective_formulation()← same for objective
+    ↓
+get_codes()                 ← prepare code snippets (e.g., imports, variable declarations)
+    ↓
+generate_code()              ← writes the full Gurobi script
+    ↓
+execute_and_debug()          ← runs Gurobi, checks status
+   (if solve fails → call LLM to refine → redo generate/execute)
